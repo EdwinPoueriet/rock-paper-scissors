@@ -5,7 +5,7 @@ import ChoiceSelector from "../components/choiceSelector"
 import Header from "../components/header";
 import {GAMEOPTIONS} from "../utils/gameOptions";
 import Results from "../components/results";
-
+import Rules from "../components/rules";
 export default function Home() {
 
   const [score, setScore] = useLocalStorage("Score",0);
@@ -13,6 +13,7 @@ export default function Home() {
   const [start, setStart] = useState(true);
   const [userPlay, setUserPlay] = useState(0);
   const [machinePlay, setMachinePlay] = useState(0);
+  const [showRules, setShowRules] = useState(false);
   const handlePlayAgain = () => {
       setStart(!start)
   }
@@ -56,9 +57,10 @@ export default function Home() {
                    yourPick={opt[userPlay]}
                    machinePick={opt[machinePlay]}/>
            )}
-
+           <button onClick={() => {setScore(0)}} className={styles.reset_button}>Restart</button>
+           <button onClick={() => {setShowRules(true)}} className={styles.rules_button}>RULES</button>
        </div>
-         <button onClick={() => {setScore(0)}}>Restart</button>
+       <Rules show={showRules} handleClose={() => setShowRules(false)} />
    </>
   )
 }

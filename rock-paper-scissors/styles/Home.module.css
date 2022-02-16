@@ -33,6 +33,17 @@
 
   margin: 0;
 }
+.reset_button{
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  padding: 5px 15px;
+  position: fixed;
+  bottom: 80px;
+  left: 30px;
+}
 .rules_button{
   border: 2px solid white;
   border-radius: 5px;
@@ -43,6 +54,30 @@
   position: fixed;
   bottom: 80px;
   right: 30px;
+}
+
+.rules_header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rules_title{
+  margin-top: 0;
+  color: hsl(229, 25%, 31%);
+  font-family: inherit;
+}
+.close_rules{
+  margin-top: 0;
+  border: none;
+  background: transparent;
+  color: darkgray;
+  font-family: inherit;
+  font-size: 30px;
+  height: 10px;
+}
+.rules_img{
+  display: flex;
+  justify-content: center;
 }
 .again_button{
   border: 2px solid white;
@@ -113,6 +148,7 @@
   justify-content: center;
   margin-top: 50px;
 }
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
