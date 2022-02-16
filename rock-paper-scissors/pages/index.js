@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import logo from '../public/images/logo.svg'
 import useLocalStorage from "../hooks/useLocalStorage";
 import {useState, useEffect} from "react";
-
+import ChoiceSelector from "../components/choiceSelector"
 
 export default function Home() {
   const opt = [
@@ -47,6 +47,7 @@ export default function Home() {
                    <p className={styles.score}>0</p>
                </div>
            </header>
+           <ChoiceSelector/>
        </div>
    </>
   )

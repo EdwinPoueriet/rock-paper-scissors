@@ -33,7 +33,86 @@
 
   margin: 0;
 }
+.rules_button{
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  padding: 5px 15px;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+}
+.again_button{
+  border: 2px solid white;
+  border-radius: 5px;
+  background: white;
+  color: hsl(229, 25%, 31%);
+  font-family: inherit;
+  font-size: 20px;
+  padding: 5px 15px;
 
+}
+.circle_button{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+
+}
+
+.inner_circle{
+  background: white;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  height: 120px;
+  width: 120px;
+  align-items: center;
+}
+
+.paper_gradiant{
+  background: radial-gradient( circle at 50%, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.scissors_gradiant{
+  background: radial-gradient( circle at 50%, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.rock_gradiant{
+  background: radial-gradient( circle at 50%, hsl(349, 71%, 52%), hsl(349, 70%, 56%));;
+}
+
+.main{
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+}
+.main::before{
+  background-image: url("../public/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 11%;
+  height: 70%;
+  width: 70%;
+  z-index: -1;
+
+}
+.top_triangle_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bottom_triangle_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
