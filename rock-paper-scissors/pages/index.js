@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 import useLocalStorage from "../hooks/useLocalStorage";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import ChoiceSelector from "../components/choiceSelector"
 import Header from "../components/header";
 import {GAMEOPTIONS} from "../utils/gameOptions";
@@ -65,9 +65,3 @@ export default function Home() {
   )
 }
 
-{/*{ opt.map((item) =>*/}
-{/*  <Button key={item.id} sx={ { borderRadius: 50, backgroundColor: '#cfe8fc' } } onClick={() => {ruler(item)}}>{item.option}</Button>*/}
-{/*)}*/}
-{/*  score: {score}*/}
-{/*  Result: {result}*/}
-{/*  <button onClick={() => {setScore(0)}}>Restart</button>*/}

@@ -1,6 +1,4 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import styles from "../styles/Home.module.css";
 import RulesImg from "../public/images/image-rules.svg";
