@@ -1,5 +1,4 @@
 import styles, {circle_button,} from "../styles/Home.module.css";
-import {GAMEOPTIONS} from "../../utils/gameOptions";
 
 export default function Circle(props){
 
@@ -9,7 +8,7 @@ export default function Circle(props){
             onClick={() => props.selection(props.gameOption)}
         >
                    <span className={styles.inner_circle}>
-                       <img src={props.img} alt={props.type}/>
+                       <img src={props.img} alt={props.option}/>
                    </span>
         </button>
     )
