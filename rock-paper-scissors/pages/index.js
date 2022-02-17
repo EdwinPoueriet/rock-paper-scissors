@@ -1,21 +1,20 @@
 import styles from '../styles/Home.module.css'
-import useLocalStorage from "../hooks/useLocalStorage";
 import {useState} from "react";
 import ChoiceSelector from "../components/choiceSelector"
 import Header from "../components/header";
 import {GAMEOPTIONS} from "../utils/gameOptions";
 import Results from "../components/results";
 import Rules from "../components/rules";
-import {ruler} from "../utils"
 import {RulerFunctions, useRulerFunctions} from "../context";
 
 export function Home() {
+  const opt = GAMEOPTIONS;
   const {setStart, start,score, setScore,result, userPlay, machinePlay} = useRulerFunctions()
   const [showRules, setShowRules] = useState(false);
   const handlePlayAgain = () => {
       setStart(!start)
   }
-    const opt = GAMEOPTIONS
+
 
   return (
    <>

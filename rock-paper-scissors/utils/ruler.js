@@ -1,4 +1,4 @@
-import {GAMEOPTIONS} from "../utils/gameOptions";
+import {GAMEOPTIONS} from "./gameOptions";
 const opt = GAMEOPTIONS;
 export const ruler = (entry, handleStart, setMachinePlay,
                       setUserPlay, setResult,setScore, score) => {

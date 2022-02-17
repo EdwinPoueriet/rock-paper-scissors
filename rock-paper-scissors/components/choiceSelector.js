@@ -5,7 +5,7 @@ import scissors from '../public/images/icon-scissors.svg'
 import {GAMEOPTIONS} from "../utils/gameOptions";
 import Circle from "./circle";
 
-export default function ChoiceSelector(props){
+export default function ChoiceSelector(){
     return(
         <main className={styles.main}>
             <div className={styles.top_triangle_wrap}>

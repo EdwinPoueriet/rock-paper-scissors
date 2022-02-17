@@ -1,4 +1,4 @@
-import {ruler } from '../utils'
+import {ruler } from '../utils/ruler'
 import {GAMEOPTIONS} from "../utils/gameOptions";
 
 test('ruler test', () => {
@@ -21,7 +21,6 @@ test('ruler test', () => {
         expect(v).toBeGreaterThanOrEqual(0)
     }
     ruler(GAMEOPTIONS[selector], handleStart, setMachinePlay,setUserPlay,(value)=>{
-        console.log(score, computedScore)
         if(value === "Tied") expect(score).toBe(computedScore)
         if(value === "You Lost" || value === "You Won") expect(score).not.toBe(computedScore)
 

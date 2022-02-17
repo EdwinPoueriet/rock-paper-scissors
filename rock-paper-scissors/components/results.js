@@ -1,4 +1,4 @@
-import styles, {rock_gradiant} from "../styles/Home.module.css"
+import styles from "../styles/Home.module.css"
 
 import Circle from "./circle";
 export default function Results(props) {

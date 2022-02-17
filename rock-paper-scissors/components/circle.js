@@ -1,6 +1,6 @@
 import styles, {circle_button,} from "../styles/Home.module.css";
 import {useRulerFunctions} from "../context";
-import {ruler} from "../utils"
+import {ruler} from "../utils/ruler"
 export default function Circle(props){
     const {setStart, setMachinePlay, setUserPlay, setResult, setScore, score} = useRulerFunctions()
     return(

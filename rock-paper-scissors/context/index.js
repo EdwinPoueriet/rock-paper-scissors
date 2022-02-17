@@ -13,8 +13,7 @@ export const RulerFunctions = ({children}) => {
     const [machinePlay, setMachinePlay] = useState(0);
     return(
         <RulerContext.Provider
-            value={{setStart, start,score, setScore,
-                result, setResult, userPlay, setUserPlay, machinePlay, setMachinePlay}}>
+            value={{setStart, start,score, setScore, result, setResult, userPlay, setUserPlay, machinePlay, setMachinePlay}}>
             {children}
         </RulerContext.Provider>
     )
