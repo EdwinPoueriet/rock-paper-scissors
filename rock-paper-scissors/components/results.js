@@ -12,7 +12,7 @@ export default function Results(props) {
                     />
 
             </div>
-            <div>
+            <div className={styles.result}>
                 <h1>{props.result}</h1>
                 <button onClick={props.playAgain} className={styles.again_button}>Play Again</button>
             </div>

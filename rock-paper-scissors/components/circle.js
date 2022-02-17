@@ -5,7 +5,7 @@ export default function Circle(props){
     return(
         <button
             className={ circle_button  +" "+ `${props.css}`}
-            onClick={() => props.selection(props.gameOption)}
+            onClick={props.isButton ? () => props.selection(props.gameOption ): undefined}
         >
                    <span className={styles.inner_circle}>
                        <img src={props.img} alt={props.option}/>

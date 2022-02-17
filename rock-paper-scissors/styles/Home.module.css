@@ -154,4 +154,9 @@
     width: 100%;
     flex-direction: column;
   }
+  .result {
+    order: 1;
+    flex: 1 0 100%;
+    text-align: center;
+  }
 }
