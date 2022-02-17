@@ -6,50 +6,23 @@ import Header from "../components/header";
 import {GAMEOPTIONS} from "../utils/gameOptions";
 import Results from "../components/results";
 import Rules from "../components/rules";
-export default function Home() {
+import {ruler} from "../utils"
+import {RulerFunctions, useRulerFunctions} from "../context";
 
-  const [score, setScore] = useLocalStorage("Score",0);
-  const [result, setResult] = useState("");
-  const [start, setStart] = useState(true);
-  const [userPlay, setUserPlay] = useState(0);
-  const [machinePlay, setMachinePlay] = useState(0);
+export function Home() {
+  const {setStart, start,score, setScore,result, userPlay, machinePlay} = useRulerFunctions()
   const [showRules, setShowRules] = useState(false);
   const handlePlayAgain = () => {
       setStart(!start)
   }
     const opt = GAMEOPTIONS
-  const ruler = (entry) => {
-
-    const userSelection = entry;
-    const machineSelection = Math.floor(Math.random() * opt.length);
-    setMachinePlay(machineSelection);
-    setUserPlay(userSelection.id);
-
-    if(userSelection.id === machineSelection) {
-       setResult("Tied")
-        console.log(result)
-        setStart(false)
-       return
-    }
-    if(userSelection.beats.some(opt => opt !== machineSelection) ){
-        setScore(score - 1)
-        setResult("You Lost")
-
-    }else{
-        setScore(score + 1)
-        setResult("You Won")
-
-    }
-      console.log(result)
-    setStart(false)
-  }
 
   return (
    <>
        <div className={styles.container}>
            <Header score={score}/>
            {start ? (
-               <ChoiceSelector ruler={ruler}/>
+               <ChoiceSelector />
            ) : (
                <Results
                    playAgain={handlePlayAgain}
@@ -63,5 +36,11 @@ export default function Home() {
        <Rules show={showRules} handleClose={() => setShowRules(false)} />
    </>
   )
+}
+
+export default function Module(){
+    return(
+        <RulerFunctions><Home /></RulerFunctions>
+    )
 }
 

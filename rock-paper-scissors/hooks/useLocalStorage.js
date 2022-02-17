@@ -13,11 +13,12 @@ export default function useLocalStorage(key, defaultValue){
         }
 
     }
-        const [value, setValue] = useState(0)
+    const [value, setValue] = useState(0)
 
     useEffect(()=>{
         setValue(init(key));
     },[]);
+
     useEffect(() => {
         window.localStorage.setItem(key, JSON.stringify(value))
     },[key,value])

@@ -12,14 +12,12 @@ export default function ChoiceSelector(props){
                 <Circle
                     isButton={true}
                     gameOption={GAMEOPTIONS[1]}
-                    selection={props.ruler}
                     option={"Rock"}
                     img={rock}
                     css={rock_gradiant}/>
                 <Circle
                     isButton={true}
                     gameOption={GAMEOPTIONS[0]}
-                    selection={props.ruler}
                     option={"Paper"}
                     img={paper}
                     css={paper_gradiant}/>
@@ -28,7 +26,6 @@ export default function ChoiceSelector(props){
                 <Circle
                     isButton={true}
                     gameOption={GAMEOPTIONS[2]}
-                    selection={props.ruler}
                     option={"Scissors"}
                     img={scissors}
                     css={scissors_gradiant}/>
