@@ -14,7 +14,8 @@ export const ruler = (entry, handleStart, setMachinePlay,
         return
     }
     if(userSelection.beats.some(opt => opt !== machineSelection) ){
-        setScore(score -1)
+        
+        setScore( prev => prev > 0 ? prev - 1 : 0)
         setResult("You Lost")
 
     }else{
